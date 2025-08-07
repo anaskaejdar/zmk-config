@@ -26,7 +26,7 @@
    &kp TAB   &kp Q     &kp W     &kp E  &kp R       &kp T    &kp LBKT                      &kp RBKT  &kp Y     &kp U     &kp I         &kp O    &kp P    &kp LBKT
    &kp ESC   &kp A     &kp S     &kp D  &kp F       &kp G    &kp MINUS                     &kp EQUAL &kp H     &kp J     &kp K         &kp L    &kp SEMI &kp SQT
    &kp BSLH  &kp Z     &kp X     &kp C  &kp V       &kp B    &kp PG_UP &kp PG_DN &kp RSHFT &kp RCTL  &kp N     &kp M     &kp COMMA     &kp DOT  &kp FSLH &kp RET
-   &tog 1    &kp LCTRL &kp SPACE &mo 3  &kp LSHFT            &kp LALT  &kp LGUI  &kp RALT  &kp RGUI  &kp SPACE           &lt 4 K_CMENU &kp BSLH &kp INS  &kp DEL
+   &tog 1    &kp LCTRL &kp SPACE &mo 1  &kp LSHFT            &kp LALT  &kp LGUI  &kp RALT  &kp RGUI  &kp SPACE           &lt 1 K_CMENU &kp BSLH &kp INS  &kp DEL
             >;
 
         };
@@ -39,7 +39,7 @@
 // | ... | ... | ... | ... | ... | ... | ... | ... | --- | ... | ... | ... | ... | ... | ... | ... | ... |
 // | ... | ... | ... | ... | ...   ... | ... | ... | --- | ... | ... | ...   ... | ... | ... | ... | ... |
             bindings = <
-   &to 0  &to 2  &trans &trans &trans &trans                             &trans &trans &trans &trans &trans &trans
+   &to 0  &to 1  &trans &trans &trans &trans                             &trans &trans &trans &trans &trans &trans
    &trans &trans &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &trans &trans
    &trans &trans &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &trans &trans
    &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
@@ -47,52 +47,5 @@
             >;
         };
 
-        dvorak_layer {// layer 2
-// -------------------------------------------------------------------------------------------------------
-// | ... | ... | ... | ... | ... | ... |             ---             | ... | ... | ... | ... | ... | ... |
-// | ... |  '  |  ,  |  .  |  P  |  Y  |  /  |       ---       |  =  |  F  |  G  |  C  |  R  |  L  |  /  |
-// | ... |  A  |  O  |  E  |  U  |  I  |  [  |       ---       |  ]  |  D  |  H  |  T  |  N  |  S  |  -  |
-// | ... |  ;  |  Q  |  J  |  K  |  X  | ... | ... | --- | ... | ... |  B  |  M  |  W  |  V  |  Z  | ... |
-// | ... | ... | ... | ... | ...   ... | ... | ... | --- | ... | ... | ...   ... | ... | ... | ... | ... |
-            bindings = <
-   &trans &trans   &trans    &trans  &trans &trans                                &trans &trans &trans &trans &trans &trans
-   &trans &kp SQT  &kp COMMA &kp DOT &kp P  &kp Y  &kp FSLH             &kp EQUAL &kp F  &kp G  &kp C  &kp R  &kp L  &FSLH
-   &trans &kp A    &kp O     &kp E   &kp U  &kp I  &kp LBKT             &kp RBKT  &kp D  &kp H  &kp T  &kp N  &kp S  &kp MINUS
-   &trans &kp SEMI &kp Q     &kp J   &kp K  &kp X  &trans &trans &trans &trans    &kp B  &kp M  &kp W  &kp V  &kp Z  &trans
-   &trans &trans   &trans    &trans     &trans     &trans &trans &trans &trans       &trans     &trans &trans &trans &trans
-            >;
-        };
-
-        function_layer {// layer 3
-// -------------------------------------------------------------------------------------------------------
-// | ... | F1  | F2  | F3  | F4  | F5  |             ---             | ... | NUM | KP/ | KP* | ... | ... |
-// | ... | F7  | F8  | F9  | F10 | F11 | F6  |       ---       | ... | ... | KP7 | KP8 | KP9 | KP+ | HOM |
-// | <MW | <M  | DMv | UM^ |  M> | MW^ | F12 |       ---       |  (  |  )  | KP4 | KP5 | KP6 | KP- | END |
-// | LSH | LCL | MW> | MCL | RCL | MWv | ... | ... | --- | ... | ... | TAB | KP1 | KP2 | KP3 | KPe | ... |
-// | ... | ... | ... | ... |  TOG LY3  | ... | ... | --- | ... | ... |    KP0    | KP= | KP. | ... | ... |
-            bindings = <
-   &trans         &F1            &F2             &F3          &F4             &F5                                          &trans   &KP_NUM &KP_SLASH &KP_ASTERISK &trans    &trans
-   &trans         &F7            &F8             &F9          &F10            &F11           &F6                  &trans   &trans   &KP_N7  &KP_N8    &KP_N9       &KP_PLUS  &HOME
-   &msc SCRL_LEFT &mmv MOVE_LEFT &mmv MOVE_DOWN  &mmv MOVE_UP &mmv MOVE_RIGHT &msc SCRL_UP   &F12                 &KP_LPAR &KP_RPAR &KP_N4  &KP_N5    &KP_N6       &KP_MINUS &END
-   &LSHFT         &mkp LCLK      &msc SCRL_RIGHT &mkp MCLK    &mkp RCLK       &msc SCRL_DOWN &trans &trans &trans &trans   &trans   &KP_N1  &KP_N2    &KP_N3       &KP_ENTER &trans
-   &trans         &trans         &trans          &trans                  &tog 3              &trans &trans &trans &trans        &KP_N0      &KP_EQUAL &KP_DOT      &trans    &trans
-            >;
-        };
-
-        arrow_layer {// layer 4
-// -------------------------------------------------------------------------------------------------------
-// | ... | ... | ... | ... | ... | ... |             ---             | ... | ... | ... | ... | ... | ... |
-// | ... | ... | ... | ... | ... | ... | ... |       ---       | ... | ... | ... | ... | ... |  >  | ... |
-// | ... | ... | ... | ... | ... | ... | ... |       ---       | ... | ... |  <  |  V  |  ^  |  >  | ... |
-// | ... | ... | ... |  V  |  ^  | ... | ... | ... | --- | ... | ... | ... | ... | ... | ... | ... | ... |
-// | ... | ... | ... | ... | ...   ... | ... | ... | --- | ... | ... | ...   ... | ... | ... | ... | ... |
-            bindings = <
-   &trans &trans &trans &trans &trans &trans                             &trans &trans &trans &trans &trans &trans
-   &trans &trans &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &trans &trans
-   &trans &trans &trans &trans &trans &trans &trans               &trans &trans &LEFT  &DOWN  &UP    &RIGHT &trans
-   &trans &trans &trans &DOWN  &UP    &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-   &trans &trans &trans &trans    &trans     &trans &trans &trans &trans    &trans     &trans &trans &trans &trans
-            >;
-        };
     };
 };
